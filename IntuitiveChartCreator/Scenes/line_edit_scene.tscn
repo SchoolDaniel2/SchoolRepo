@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2x8cshe3s6x"]
+
+[ext_resource type="Script" path="res://Scripts/LineEditVariables.gd" id="1_qe7d8"]
+
+[node name="LineEditScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 46.0
+script = ExtResource("1_qe7d8")
+
+[node name="Name" type="LineEdit" parent="."]
+offset_right = 200.0
+offset_bottom = 31.0
+placeholder_text = "Input name"
+
+[node name="Maximum" type="LineEdit" parent="."]
+offset_left = 400.0
+offset_right = 600.0
+offset_bottom = 31.0
+placeholder_text = "Input maximum points"
+
+[node name="Points" type="LineEdit" parent="."]
+offset_left = 200.0
+offset_right = 400.0
+offset_bottom = 31.0
+placeholder_text = "Input current points"
+
+[connection signal="text_changed" from="Name" to="." method="_on_name_text_changed"]
+[connection signal="text_changed" from="Maximum" to="." method="_on_maximum_text_changed"]
+[connection signal="text_changed" from="Points" to="." method="_on_points_text_changed"]
