@@ -15,9 +15,10 @@ func _on_line_edit_text_changed(new_text):
 		get_node("MainMenuStuff/LineEdit").set("text", "")
 
 func _on_continue_pressed():
-	get_node("MainMenuStuff").set("visible", false)
-	get_node("StackedLineEdits").set("visible", true)
-	CreateLineEdit()
+	if int(get_node("MainMenuStuff/LineEdit").get("text")) != 0:
+		get_node("MainMenuStuff").set("visible", false)
+		get_node("StackedLineEdits").set("visible", true)
+		CreateLineEdit()
 
 func _on_check_box_toggled(button_pressed):
 	ShowNames = button_pressed

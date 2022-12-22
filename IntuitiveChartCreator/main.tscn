@@ -28,6 +28,7 @@ offset_right = 238.0
 offset_bottom = 314.0
 
 [node name="Names" type="Control" parent="StackedBars"]
+layout_mode = 1
 anchors_preset = 0
 offset_left = -180.0
 offset_top = -76.0
